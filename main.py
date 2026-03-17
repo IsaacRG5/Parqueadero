@@ -1,4 +1,3 @@
-
 TOTAl_ESPACIOS = 10
 parqueadero = ["ABC123", "DEF456", "GHI789", "JKL321", "MNO654",
             "Libre", "Libre", "Libre", "Libre", "Libre"]
@@ -38,6 +37,11 @@ try:
                     print("Placa no encontrada")
         elif opcion == "4":
                     print("Sistema finalizado")
+
+                    with open("Registro_parqueadero.txt", "w") as archivo:
+                        for placa in parqueadero:
+                                archivo.write(placa + "\n")
+                                print("Datos guardados en 'Registro_parqueadero.txt'.programa terminado ")
                     break
         else:
                     print("Opción inválida")
